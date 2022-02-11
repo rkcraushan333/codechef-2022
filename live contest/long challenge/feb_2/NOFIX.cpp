@@ -1,18 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-int k;
-bool check(int n, vector<int> arr)
-{
-    for (int i = 0; i < n; i++)
-    {
-        if (arr[i] == i + 1)
-        {
-            k = i;
-            return true;
-        }
-    }
-    return false;
-}
+
 int main()
 {
     int test;
@@ -26,6 +14,16 @@ int main()
         {
             cin >> v[i];
         }
+        int count = 0, k = 1;
+        for (int i = 0; i < no; i++)
+        {
+            if (v[i] == i + k)
+            {
+                count++;
+                k++;
+            }
+        }
+        cout << count << endl;
     }
     return 0;
 }
