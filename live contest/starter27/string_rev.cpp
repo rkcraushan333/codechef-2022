@@ -12,16 +12,24 @@ void inforkc()
     {
         str[i] = s[n - i - 1];
     }
-    int count = 0;
+    int count1 = 0, count2 = 0;
     for (int i = 0; i < n; i++)
     {
-        count++;
+        count1++;
         if (str[i] != s[i])
         {
             break;
         }
     }
-    cout << n - count << endl;
+    for (int i = n - 1; i >= 0; i--)
+    {
+        count2++;
+        if (str[i] != s[i])
+        {
+            break;
+        }
+    }
+    cout << n - count1 << endl;
 }
 
 signed main()
