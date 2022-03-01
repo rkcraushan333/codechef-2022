@@ -1,3 +1,4 @@
+// wrong
 #include <bits/stdc++.h>
 using namespace std;
 #define int long long
@@ -33,6 +34,7 @@ signed main()
                 v[i] = (v[i] % x);
             }
         }
+        sort(v.begin(), v.end());
         bool flag = true;
         for (int i = 1; i <= n; i++)
         {
